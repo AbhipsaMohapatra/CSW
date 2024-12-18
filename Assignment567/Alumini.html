@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+    </script>
+    <style>
+        body {
+            background-image: url(https://wallpapers.com/images/hd/professional-background-3ccop4r0ad1yy61v.jpg);
+            background-repeat: no-repeat;
+            /* background-position: center center; */
+            /* object-fit: cover; */
+            /* width:100vw; */
+            height: 100vh;
+            margin: 0;
+            background-size: cover;
+        }
+
+        img {
+            position: relative;
+            left: 43%
+        }
+
+        .container {
+            width: 50vw;
+
+        }
+
+       .card {
+            border: 3px solid black;
+
+        }
+
+        ul {
+            display: none;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .bio {
+            margin-top: 12px;
+            display: none;
+            border: 2px solid black;
+            width: 40vw;
+        }
+
+        .card-title {
+            font-size: 23px;
+            text-decoration: underline;
+        }
+
+        .p1 {
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h3 class="text-center text-white"><u>Alumini On Focus</u></h3>
+        <div class="card">
+            <img src="https://banner2.cleanpng.com/lnd/20240504/lk/avv02mrgb.webp" alt="cardimage" class="card-img-top"
+                style="width:100px">
+            <div class="card-body">
+
+                <div class="card-title text-center mt-4"><em>Welcome Alumini Abhipsa</em></div>
+                <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis
+                    dolor perferendis praesentium atque non, deserunt est sequi error velit odio quidem quos.</div>
+                <button class="btn btn-info btn1 mt-4"> Achievements</button>
+                <ul class="achievement">
+                    <li>FrontEnd Development</li>
+                    <li>BackEnd Development</li>
+                    <li>Java</li>
+                </ul>
+                <button class="btn btn2 btn-warning mt-4">
+                    Bio
+                </button>
+                <div class="container bio ">
+                    <div>Name:Abhipsa Mohapatra</div>
+                    <div>Section:2G3</div>
+                    <div>Telephone Number:9692467181</div>
+                    <div>Email:abhipsamohapatra@gmail.com</div>
+                    <div>Gender:Female</div>
+                    <div>Category:General</div>
+
+
+
+                </div>
+            </div>
+            <p class="text-center bg-success p1">Thank you for visiting</p>
+        </div>
+
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(".btn1").click(function () {
+                $(".achievement").toggle(1000);
+
+
+            })
+            $(".btn2").click(function () {
+                $(".bio").toggle(1000);
+            })
+
+        })
+    </script>
+
+</body>
+
+</html>

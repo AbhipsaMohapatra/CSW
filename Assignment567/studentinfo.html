@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" 
+        content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href= 
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
+    <script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"> 
+    </script> 
+    <script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"> 
+    </script> 
+    <script src= 
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"> 
+    </script> 
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        
+        .g1{
+            position:relative;
+            left:35%;
+        }
+        table{
+            border-collapse:collapse
+        }
+        tr,th,td{
+            border:2px solid black;
+            text-align: center;
+        }
+        tr:nth-child(2n){
+            background-color:gold;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container-fluid c1">
+            <div class="btn-group g1">
+                <button type="button" class="btn btn-primary">Admissions</button>
+                <div class="btn-group">
+                    <button type="button" class="dropdown-toggle btn btn-primary" data-toggle="dropdown">Acheivements</button>
+                    <div class="dropdown-menu">
+                        <a href="Gallery.html" target="_blank" >Gallery</a>
+                        <br>
+                        <a href="#" target="_blank" >Events Oganized</a>
+                        <br>
+                        <a href="#" target="_blank" >Acedemic Performances</a>
+                    </div>
+                </div>
+                <a href="Alumini.html" target="_blank"> <button type="button" class="btn btn-primary">Alumini on focus</button></a>
+               
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h2 class="text-center text-warning">Student Information</h2>
+        <table class="table table-center mt-4">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Semester</th>
+                <th>Registration Number</th>
+                
+            </tr>
+            <tr>
+                <td>Abhipsa</td>
+                <td>19</td>
+                <td>3rd</td>
+                <td>1234</td>
+                <td><button class="btn btn-ouline btn-outline-success e1">Edit</button></td>
+                <td><button class="btn btn-ouline btn-outline-danger d1">Delete</button></td>
+
+            </tr>
+            <tr>
+                <td>Akriti</td>
+                <td>19</td>
+                <td>4th</td>
+                <td>12345</td>
+                <td><button class="btn btn-ouline btn-outline-success e1">Edit</button></td>
+                <td><button class="btn btn-ouline btn-outline-danger d1">Delete</button></td>
+
+            </tr>
+            <tr>
+                <td>Amrita</td>
+                <td>20</td>
+                <td>4th</td>
+                <td>9876</td>
+                <td><button class="btn btn-ouline btn-outline-success e1">Edit</button></td>
+                <td><button class="btn btn-ouline btn-outline-danger d1">Delete</button></td>
+
+            </tr>
+            <tr>
+                <td>Amba</td>
+                <td>18</td>
+                <td>1st</td>
+                <td>1876</td>
+                <td><button class="btn btn-ouline btn-outline-success e1">Edit</button></td>
+                <td><button class="btn btn-ouline btn-outline-danger d1">Delete</button></td>
+
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $(".d1").click(function(){
+                let c = $(this).parents()[1];
+                $(c).remove();
+            })
+            $(".e1").click(function(){
+                let val = prompt("what value do you want to edit like Name or Age or Semister or Registration number");
+                if(val.toLowerCase()=="name"){
+                    let name = prompt("enter the name");
+                    let key =$(this).parent().siblings()[0];
+                    $(key).empty();
+                    $(key).html(name);
+                  
+                }
+                else if(val.toLowerCase()=="age"){
+                    let age = prompt("enter the age");
+                    let key1 =$(this).parent().siblings()[1];
+                    $(key1).empty();
+                    $(key1).html(age);
+
+                }
+                else if(val.toLowerCase()=="semister"){
+                    let sem = prompt("enter the semister");
+                    let key2 =$(this).parent().siblings()[2];
+                    $(key2).empty();
+                    $(key2).html(sem);
+
+                }
+                else if(val.toLowerCase()=="registration number"){
+                    let regno = prompt("enter the registration number");
+                    let key3 =$(this).parent().siblings()[3];
+                    $(key3).empty();
+                    $(key3).html(regno);
+
+                }
+            })
+        })
+
+    </script>
+    
+</body>
+</html>

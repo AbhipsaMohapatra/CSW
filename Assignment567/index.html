@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" 
+            content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" href= 
+    "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
+        <script src= 
+    "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"> 
+        </script> 
+        <script src= 
+    "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"> 
+        </script> 
+        <script src= 
+    "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"> 
+        </script> 
+        <style>
+            body{
+                background-color: green;
+                font-size:25px
+            }
+            button{
+                width:250px;
+                font-size:25px
+
+            }
+            form{
+                width:50%;
+                margin-top:45px;
+            }
+            .container{
+                padding: 12px;
+                background-color: whitesmoke;
+                height:70vh;
+            }
+        </style>
+    </head> 
+<body>
+    <div class="container border border-dark d-flex flex-column jutify-content-center align-items-center mt-4">
+        <h2 class="text-center">School Management System</h2>
+        <p class="text-center">Welcome to this page, Hope this page helps you to learn and connect</p>
+        <form action="" class="d-flex flex-column jutify-content-center align-items-center">
+            <div class="form-group">
+                <label for="Username">Enter Username :</label>
+                <input type="text" name="name" id="Username" placeholder="Enter name" class="name" reaquired>
+            </div>
+            <div class="form-group">
+                <label for="pwd">Enter Password:</label>
+                <input type="password" name="pwd" id="pwd"  title="This input feild should contain 8 characters atleast one digit" placeholder="Enter password" class="pwd" required>
+            </div>
+            <button type="button" class="btn btn-outline btn-outline-success mt-4" onClick="get()"   >Click here to submit</button>
+        </form>
+    </div>
+    <script>
+        function get(){
+            console.log("we got it");
+            let n = $(".name").val();
+            let pwd = $(".pwd").val();
+            if(!n || !pwd){
+                alert("Fill the details");
+            }
+            else{
+               let anc = document.createElement("a");
+               anc.className = "anchor"
+               anc.href = "studentinfo.html";
+               anc.target = "_blank";
+               document.body.append(anc);
+               n = $(".name").val(" ");
+               pwd = $(".pwd").val(" ");
+               console.log(n+"is the value")
+               anc.click();
+               console.log("DONE");
+                
+            }
+        }
+      
+    </script>
+    
+</body>
+</html>
